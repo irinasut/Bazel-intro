@@ -1,0 +1,16 @@
+syntax = 'proto3';
+
+message Name
+{    
+    string name = 1;
+}
+
+message GreetingsMsg 
+{
+    string msg = 1;
+}
+
+service Greeter 
+{
+    rpc hello(Name) returns(GreetingsMsg);
+}
